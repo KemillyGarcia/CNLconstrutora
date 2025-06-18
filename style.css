@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border;
 }
 
 @font-face {
@@ -10,10 +10,12 @@
 }
 
 :root {
-    --branco: #FFFFFF;
+    --branco: #dddddd;
     --verde-claro: #879E6D;
     --verde-escuro: #585E51;
-    --preto:#0000;
+    --preto: #0000;
+    --branco2: #ffffff;
+
 }
 
 .container-grid {
@@ -24,7 +26,7 @@
 
 body {
     overflow-x: hidden;
-   background-color: var(--branco);
+    background-color: var(--branco);
 }
 
 .titulo {
@@ -35,8 +37,17 @@ body {
 
 }
 
+/* -----------------header------------------- */
+
+
+
+
+
+
+
+
 .titulo h2 {
-    color:var(--branco);
+    color: var(--branco2);
     margin-bottom: 0;
     background-color: var(--verde-claro);
     border-radius: 20px;
@@ -52,20 +63,22 @@ body {
 
 
 header {
-    height: 165px;
+    height: 255px;
 }
 
 header img {
-    width: 234px;
+    width: 200px;
 }
 
-header .container-grid {
+header.container-grid {
     height: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 .menu {
     max-width: 700px;
@@ -78,7 +91,7 @@ header .container-grid {
 .menu a {
     font-size: 20px;
     font-family: "Recursive", sans-linear;
-    color: var(--preto);
+    color: var(--verde-escuro);
 
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
@@ -103,15 +116,16 @@ header .container-grid {
 
 }
 
+.banner {
+    height: 60vh;
 
-.conteudo-banner ul {
-    font-size: 30px;
-    font-weight: 600;
-    font-family: "Recursive", sans-linear-bold;
-    color: var(--verde-pixelV);
-    list-style-type: none;
-    padding: 0;
+    /* background-image: url(./imgs/parallax.svg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/banner.novo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 120px;
 }
+
 
 
 /* -------------- SOBRE --------------- */
@@ -125,9 +139,9 @@ header .container-grid {
 }
 
 #sobre img {
-    max-width: 460px;
-    width: 40%;
-    border-radius: 40px;
+    max-width: 500px;
+    width: 60%;
+    border-radius: 60px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -143,12 +157,13 @@ header .container-grid {
 
 
 #parallax {
-    height: 250px;
+    height: 350px;
 
     /* background-image: url(./imgs/parallax.svg); */
     background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/pexels-scottwebb-137586\ \(1\).jpg);
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 30%;
+    background-size: 100%;
     margin-bottom: 120px;
 }
 
@@ -177,15 +192,15 @@ header .container-grid {
     position: relative;
 }
 
-.linha-roxa {
+.linha-verde {
     position: absolute;
     z-index: -1;
     top: calc(50% - 125px);
 
     height: 250px;
     width: 100vw;
-    background: linear-gradient(0deg, rgba(36, 0, 105, 1)0%,
-            rgba(71, 0, 207, 1)100%);
+    background: linear-gradient(0deg, rgba(135, 158, 109, )0%,
+            rgba(88, 94, 81, )100%);
 }
 
 #servicos .card {
@@ -193,7 +208,7 @@ header .container-grid {
     margin: 20px;
     padding: 40px 20px;
     border-radius: 40px;
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
 
@@ -207,7 +222,7 @@ header .container-grid {
 #servicos .card h3 {
     font-size: 24px;
     margin: 5px 0 30px;
-    color: var(--roxo-pixelV);
+    color: var(--verde-escuro);
     font-family: "Recursive", sans-linear-bold;
     text-align: center;
 
@@ -221,22 +236,22 @@ header .container-grid {
 
 }
 
-#servicos .card svg {
-    color: var(--roxo-pixelV);
-    height: 75px;
+.container-cards .card svg {
+    color: var(--verde-escuro);
+    width: 80px;
 
 }
 
 #servicos .card:hover {
-    border: solid 3px var(--verde-pixelV);
+    border: solid 3px var(--verde-claro);
 }
 
 #servicos .card:hover h3 {
-    color: var(--verde-pixelV);
+    color: var(--verde-claro);
 }
 
 #servicos .card:hover svg {
-    fill: var(--verde-pixelV);
+    fill: var(--verde-claro);
 }
 
 /* ----------------------------- Contato -------------------------- */
@@ -268,8 +283,8 @@ header .container-grid {
     align-items: center;
 
     border-radius: 40px;
-    background-color: var(--Contato);
-    border: solid 3px var(--roxo-pixelV);
+    background-color: var(--preto);
+    border: solid 3px var(--verde-escuro);
 
     color: var(--preto);
     font-family: "Recursive", sans-linear;
@@ -351,8 +366,8 @@ header .container-grid {
     height: 40px;
     width: 60%;
 
-    background-color: var(--roxo-pixelV);
-    color: var(--branco);
+    background-color: var(--verde-escuro);
+    color: var(--branco2);
 
     border: none;
     border-radius: 4px;
@@ -365,21 +380,21 @@ header .container-grid {
 
     cursor: pointer;
 
-    transition: background-color 500ms;
+    transition: backgraund-color 500ms;
 }
 
 #contato form button:hover {
-    background-color: var(--verde-pixelV);
+    background-color: var(--verde-claro);
 }
 
 /* ----------Footer------------- */
 footer {
-    height: 250px;
-    background-image: url(./imgs/footer.png);
+    height: 300px;
+    background-image: url(./img/Footer.png);
 }
 
 footer img {
-    height: 90px;
+    height: 150px;
 }
 
 footer .container-grid {
@@ -400,25 +415,25 @@ footer .container-grid {
 }
 
 .redes-sociais p {
-    color: var(--branco);
+    color: var(--branco2);
 
     font-family: "Recursive", sans-linear-bold;
     font-size: 24px;
 }
 
 .icones-redes {
-    width: 240px;
+    width: 220px;
 
     display: flex;
     justify-content: space-between;
 }
 
 .icones-redes a {
-    color: var(--branco);
+    color: var(--branco2);
 }
 
 .icones-redes a:hover {
-    color: var(--verde-pixelV);
+    color: var(--verde-claro);
 }
 
 /* ---------------------------Responsividade-----------------------------*/
@@ -454,17 +469,17 @@ footer .container-grid {
     display: none;
 }
 
-.menu-fechado{
+.menu-fechado {
     display: none;
 }
 
 /* -------------------------------------------------- */
 @media screen and (max-width: 768px) {
-    header{
+    header {
         position: relative;
     }
 
-    header button{
+    header button {
         width: 50px;
         background: none;
         border: none;
@@ -473,11 +488,11 @@ footer .container-grid {
         display: unset;
     }
 
-    header svg{
-        fill: var(--branco);
+    header svg {
+        fill: var(--branco2);
     }
 
-    nav.menu{
+    nav.menu {
         height: 500px;
         width: 350px;
 
@@ -493,62 +508,71 @@ footer .container-grid {
         z-index: 1;
     }
 
-    .conteudo-banner img{
+    .conteudo-banner img {
         display: none;
     }
-    
-    .conteudo-banner{
+
+    .conteudo-banner {
         text-align: center;
     }
 
-    #sobre img{
+    #sobre img {
         display: none;
     }
 
-    .titulo{
+    .titulo {
         justify-content: center;
     }
 
-    #cases img{
+    #cases img {
         height: 200px;
     }
 
-    footer .roda-pe{
+    footer .roda-pe {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        gap:20px;
+        gap: 20px;
     }
-    footer img{
+
+    footer img {
         height: 80px;
-    }.redes-sociais{
+    }
+
+    .redes-sociais {
         align-items: center;
         justify-content: center;
     }
 
-    .redes-sociais svg{
+    .redes-sociais svg {
         height: 35px;
     }
 
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
     nav.menu {
         width: 260px;
     }
 
-    .conteudo-banner p{
+    .conteudo-banner p {
         font-size: 24px;
         width: 310px;
     }
 
-    .conteudo-banner ul{
+    .conteudo-banner ul {
         font-size: 25px;
     }
 
     .titulo,
-    .titulo h2{
+    .titulo h2 {
         font-size: 20px;
     }
+}
+
+header .container-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center0;
 }
